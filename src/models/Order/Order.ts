@@ -1,5 +1,5 @@
-import {Entity} from "../shared/Entity";
-import {Meta} from "../shared/Meta";
+import {Entity} from "../shared";
+import {Meta} from "../shared";
 import {Billing} from "./Billing";
 import {Shipping} from "./Shipping";
 import {LineItems} from "./LineItems";
@@ -246,7 +246,7 @@ export class Order extends Entity {
 
     public meta_data: Meta[];
 
-    public line_item: LineItems[];
+    public line_items: LineItems[];
 
     public readonly tax_lines: TaxLines[];
 

@@ -6,3 +6,4 @@ export * from './ProductImage';
 export * from './ProductImage';
 export * from './ProductDefaultAttribute';
 export * from './ProductTag';
+export * from './ProductRequestParams';

@@ -3,7 +3,7 @@ export class Meta {
 
     public key: string;
 
-    public value: string;
+    public value: any;
 
     /**
      * Creates a new order instance with the given properties

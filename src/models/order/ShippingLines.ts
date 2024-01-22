@@ -1,13 +1,11 @@
 import {Model} from "../shared/Model";
 import {Taxes} from "./Taxes";
-import {Meta} from "../shared/Meta";
+import {Meta} from "../shared";
 
-export class FeeLines extends Model{
-    public name: string;
+export class ShippingLines extends Model {
+    public method_title: string;
 
-    public tax_class: string;
-
-    public tax_status: string;
+    public method_id: string;
 
     public total: string;
 

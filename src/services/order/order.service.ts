@@ -1,7 +1,7 @@
 import WooCommerceRestApi from "@carmineconversano/woocommerce-rest-api-fork";
-import {OrderQueryParams} from "../../models/Order/OrderQueryParams";
-import {Order} from "../../models/Order/Order";
-import {SuccessResponse} from "../../models/shared/SuccessResponse";
+import {OrderQueryParams} from "../../models";
+import {Order} from "../../models";
+import {SuccessResponse} from "../../models";
 import {addPaginationInfo} from "../../utils/addPaginationInfo";
 
 export class OrderService extends WooCommerceRestApi {

@@ -1,5 +1,5 @@
 import {Model} from "../shared/Model";
-import {Meta} from "../shared/Meta";
+import {Meta} from "../shared";
 
 export class CouponLines extends Model {
     public code: string;

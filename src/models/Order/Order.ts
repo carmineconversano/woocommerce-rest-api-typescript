@@ -184,8 +184,6 @@ export enum Currency {
     ZMW
 }
 
-class OrderMeta extends Meta{}
-
 export class Order extends Entity {
 
     public readonly id: number;

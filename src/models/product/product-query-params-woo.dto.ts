@@ -10,7 +10,7 @@ export type ProductTaxClassParams = 'standard' | 'reduced-rate' | 'zero-rate';
 /**
  * Represents parameters for making requests related to products.
  */
-export class ProductRequestParameters {
+export class ProductQueryParamsWoo {
     /**
      * Scope under which the request is made; determines fields present in response. Options: view and edit. Default is view.
      */

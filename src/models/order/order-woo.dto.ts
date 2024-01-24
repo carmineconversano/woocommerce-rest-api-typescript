@@ -27,7 +27,7 @@ export class OrderWooDto {
      * @type {number}
      * @readonly
      */
-    public readonly id: number;
+    public id: number;
 
     /**
      * Parent order ID.

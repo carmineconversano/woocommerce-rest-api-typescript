@@ -11,3 +11,4 @@ export * from './order-shipping-lines-woo.dto';
 export * from './order-tax-lines-woo.dto';
 export * from './order-taxes-woo.dto';
 export * from './order-query-params-one-woo.dto'
+export * from './order-delete-query-params-woo.dto'

@@ -1,9 +1,8 @@
 import WooCommerceRestApi, {IWooCommerceRestApiOptions} from "@carmineconversano/woocommerce-rest-api-fork";
-import {CustomerWooDto, NoParams} from "../../models";
+import {CustomerDeleteQueryParamsWooDto, CustomerQueryParamsWooDto, CustomerWooDto, NoParams} from "../../models";
 import {WooCommerceService} from "../woo-commerce.service";
-import {CustomerQueryParamsWooDto} from "../../models/customer/customer-query-params-woo.dto";
 
-export class CustomerWooService extends WooCommerceService<CustomerWooDto, CustomerQueryParamsWooDto, NoParams> {
+export class CustomerWooService extends WooCommerceService<CustomerWooDto, CustomerQueryParamsWooDto, NoParams, CustomerDeleteQueryParamsWooDto> {
 
     constructor(props: WooCommerceRestApi | IWooCommerceRestApiOptions) {
         super(props, 'customers');

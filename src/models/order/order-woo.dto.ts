@@ -4,7 +4,7 @@ import {Meta} from "../shared";
 import {OrderLineItemsWooDto} from "./order-line-items-woo.dto";
 import {OrderTaxLinesWooDto} from "./order-tax-lines-woo.dto";
 import {OrderShippingLinesWooDto} from "./order-shipping-lines-woo.dto";
-import {FeeLines} from "./oder-fee-lines-woo.dto";
+import {OrderFeeLinesProperties} from "./oder-fee-lines-woo.dto";
 import {OrderCouponLinesWooDto} from "./order-coupon-lines-woo.dto";
 import {OrderRefundsWooDto} from './order-refunds-woo.dto'
 
@@ -285,7 +285,7 @@ export class OrderWooDto {
      * @type {array}
      * @readonly
      */
-    public fee_lines: FeeLines[];
+    public fee_lines: OrderFeeLinesProperties[];
 
     /**
      * Coupons line data. See Order - Coupon lines properties.

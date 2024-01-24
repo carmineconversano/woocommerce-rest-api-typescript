@@ -1,6 +1,6 @@
 {
   "name": "@carmineconversano/woocommerce-rest-api-typescript",
-  "version": "1.0.9",
+  "version": "1.0.11",
   "description": "WooCommerce REST API written in TypeScript based on WooCommerce REST API js lib",
   "types": "./lib/cjs/types/index.d.ts",
   "main": "./lib/cjs/index.js",
@@ -8,8 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -rf ./lib",
     "build": "npm run clean && npm run build:esm && npm run build:cjs",
-    "build:esm": "tsc -p ./configs/tsconfig.esm.json && mv lib/esm/index.js lib/esm/index.mjs",
-    "build:cjs": "tsc -p ./configs/tsconfig.cjs.json",
+    "build:esm": "nest build -p ./configs/tsconfig.esm.json && mv lib/esm/index.js lib/esm/index.mjs",
+    "build:cjs": "nest build -p ./configs/tsconfig.cjs.json",
     "prepack": "npm run build"
   },
   "repository": {
@@ -38,10 +38,14 @@
   },
   "homepage": "https://github.com/carmineconversano/woocommerce-rest-api-typescript#readme",
   "devDependencies": {
-    "ts-node": "^10.9.2",
-    "typescript": "^5.3.3"
+    "@nestjs/cli": "^10.0.0",
+    "@nestjs/common": "^10.3.1",
+    "@types/node": "^20.11.6",
+    "typescript": "^5.3.3",
+    "@nestjs/swagger": "^7.2.0"
   },
   "dependencies": {
-    "@carmineconversano/woocommerce-rest-api-fork": "^2.0.0"
+    "@carmineconversano/woocommerce-rest-api-fork": "^2.0.0",
+    "@nestjs/schematics": "^10.1.0"
   }
 }

@@ -1,9 +1,9 @@
 import WooCommerceRestApi, {IWooCommerceRestApiOptions} from "@carmineconversano/woocommerce-rest-api-fork";
-import {OrderQueryParamsWooDto, OrderWooDto} from "../../models";
+import {ProductQueryParamsWoo, ProductWooDto} from "../../models";
 import {WooCommerceService} from "../woo-commerce.service";
-import {OrderQueryParamsOneWooDto} from "../../models/order/order-query-params-one-woo.dto";
+import {NoParams} from "../../models";
 
-export class ProductWooService extends WooCommerceService<OrderWooDto, OrderQueryParamsWooDto, OrderQueryParamsOneWooDto> {
+export class ProductWooService extends WooCommerceService<ProductWooDto, ProductQueryParamsWoo, NoParams> {
 
     constructor(props: WooCommerceRestApi | IWooCommerceRestApiOptions) {
         super(props, 'products');

@@ -5,8 +5,8 @@ import {LineItems} from "./LineItems";
 import {TaxLines} from "./TaxLines";
 import {ShippingLines} from "./ShippingLines";
 import {FeeLines} from "./FeeLines";
-import {CouponLines, Refunds} from "../../../lib/cjs/types";
-
+import {CouponLines} from "./CouponLines";
+import {Refunds} from './Refunds'
 
 export enum OrderStatus {
     PENDING = 'pending',

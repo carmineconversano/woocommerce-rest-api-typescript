@@ -1,4 +1,4 @@
-export enum Currency {
+export enum OrderCurrency {
     AED,
     AFN,
     ALL,

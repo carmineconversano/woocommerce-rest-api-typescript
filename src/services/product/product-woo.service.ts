@@ -2,19 +2,19 @@ import WooCommerceRestApi from "@carmineconversano/woocommerce-rest-api-fork";
 import {ProductRequestParameters} from "../../models";
 import {SuccessResponse} from "../../models";
 import {addPaginationInfo} from "../../utils/addPaginationInfo";
-import {Product} from "../../models";
+import {ProductWooDto} from "../../models";
 
-export class ProductService extends WooCommerceRestApi {
+export class ProductWooService extends WooCommerceRestApi {
     private PATH = 'products';
 
-    public async retrieveList(query: ProductRequestParameters): Promise<SuccessResponse<Product[]>> {
-        const response: SuccessResponse<Product[]> = await this.get(this.PATH, query);
+    public async retrieveList(query: ProductRequestParameters): Promise<SuccessResponse<ProductWooDto[]>> {
+        const response: SuccessResponse<ProductWooDto[]> = await this.get(this.PATH, query);
         return Promise.resolve(
             addPaginationInfo(response)
         )
     }
 
-    public async retrieveOne(productId: number): Promise<SuccessResponse<Product>> {
+    public async retrieveOne(productId: number): Promise<SuccessResponse<ProductWooDto>> {
         return await this.get(`${this.PATH}/${productId}`);
     }
 }

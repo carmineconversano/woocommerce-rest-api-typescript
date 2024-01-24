@@ -1,7 +1,7 @@
 import {Model} from "../shared/Model";
 import {Meta} from "../shared";
 
-export class Taxes extends Model{
+export class OrderTaxLinesWooDto extends Model{
     public readonly rate_code: string;
 
     public readonly rate_id: string;

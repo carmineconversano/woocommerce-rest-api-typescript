@@ -1,8 +1,8 @@
 import {Model} from "../shared/Model";
-import {Taxes} from "./Taxes";
+import {OrderTaxesWooDto} from "./order-taxes-woo.dto";
 import {Meta} from "../shared";
 
-export class ShippingLines extends Model {
+export class OrderShippingLinesWooDto extends Model {
     public method_title: string;
 
     public method_id: string;
@@ -11,7 +11,7 @@ export class ShippingLines extends Model {
 
     public total_tax: string;
 
-    public taxes: Taxes[];
+    public taxes: OrderTaxesWooDto[];
 
     public meta_data: Meta[]
 }

@@ -1,7 +1,7 @@
 /**
  * Represents a product attribute.
  */
-export class ProductAttribute {
+export class ProductAttributeWooDto {
     /**
      * Attribute ID.
      * @readonly
@@ -34,7 +34,7 @@ export class ProductAttribute {
     public options: string[];
 
     /**
-     * Creates an instance of ProductAttribute.
+     * Creates an instance of ProductAttributeWooDto.
      * @param {number} id - The attribute ID.
      * @param {string} name - The attribute name.
      * @param {number} position - The attribute position.

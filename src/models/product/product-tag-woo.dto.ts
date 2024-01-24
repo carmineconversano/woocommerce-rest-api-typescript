@@ -1,7 +1,7 @@
 /**
  * Represents a product tag.
  */
-export class ProductTag {
+export class ProductTagWooDto {
     /**
      * Tag ID.
      * @readonly
@@ -20,7 +20,7 @@ export class ProductTag {
     public readonly slug: string;
 
     /**
-     * Creates an instance of ProductTag.
+     * Creates an instance of ProductTagWooDto.
      * @param {number} id - The tag ID.
      * @param {string} name - The tag name.
      * @param {string} slug - The tag slug.

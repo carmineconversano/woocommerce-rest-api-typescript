@@ -2,21 +2,21 @@
  * Represents the dimensions of a product.
  * @class
  */
-export class ProductDimensions {
+export class ProductDimensionsWooDto {
     /**
-     * Product length.
+     * ProductWooDto length.
      * @type {string}
      */
     public length?: string;
 
     /**
-     * Product width.
+     * ProductWooDto width.
      * @type {string}
      */
     public width?: string;
 
     /**
-     * Product height.
+     * ProductWooDto height.
      * @type {string}
      */
     public height?: string;

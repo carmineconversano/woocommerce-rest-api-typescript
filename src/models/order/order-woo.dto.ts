@@ -1,12 +1,12 @@
-import {Billing} from "./Billing";
-import {Shipping} from "./Shipping";
+import {OrderBillingWooDto} from "./order-billing-woo.dto";
+import {OrderShippingWooDto} from "./order-shipping-woo.dto";
 import {Meta} from "../shared";
-import {LineItems} from "./LineItems";
-import {TaxLines} from "./TaxLines";
-import {ShippingLines} from "./ShippingLines";
-import {FeeLines} from "./FeeLines";
-import {CouponLines} from "./CouponLines";
-import {Refunds} from './Refunds'
+import {OrderLineItemsWooDto} from "./order-line-items-woo.dto";
+import {OrderTaxLinesWooDto} from "./order-tax-lines-woo.dto";
+import {OrderShippingLinesWooDto} from "./order-shipping-lines-woo.dto";
+import {FeeLines} from "./oder-fee-lines-woo.dto";
+import {OrderCouponLinesWooDto} from "./order-coupon-lines-woo.dto";
+import {OrderRefundsWooDto} from './order-refunds-woo.dto'
 
 export enum OrderStatus {
     PENDING = 'pending',
@@ -21,7 +21,7 @@ export enum OrderStatus {
 /**
  * Represents an Order in WooCommerce.
  */
-export class Order {
+export class OrderWooDto {
     /**
      * Unique identifier for the resource.
      * @type {number}
@@ -191,15 +191,15 @@ export class Order {
 
     /**
      * Billing address. See Order - Billing properties.
-     * @type {Billing}
+     * @type {OrderBillingWooDto}
      */
-    public billing: Billing;
+    public billing: OrderBillingWooDto;
 
     /**
      * Shipping address. See Order - Shipping properties.
-     * @type {Shipping}
+     * @type {OrderShippingWooDto}
      */
-    public shipping: Shipping;
+    public shipping: OrderShippingWooDto;
 
     /**
      * Payment method ID.
@@ -264,21 +264,21 @@ export class Order {
      * Line items data. See Order - Line items properties.
      * @type {array}
      */
-    public line_items: LineItems[];
+    public line_items: OrderLineItemsWooDto[];
 
     /**
      * Tax lines data. See Order - Tax lines properties.
      * @type {array}
      * @readonly
      */
-    public readonly tax_lines: TaxLines[];
+    public readonly tax_lines: OrderTaxLinesWooDto[];
 
     /**
      * Shipping lines data. See Order - Shipping lines properties.
      * @type {array}
      * @readonly
      */
-    public shipping_lines: ShippingLines[];
+    public shipping_lines: OrderShippingLinesWooDto[];
 
     /**
      * Fee lines data. See Order - Fee lines properties.
@@ -292,14 +292,14 @@ export class Order {
      * @type {array}
      * @readonly
      */
-    public coupon_lines: CouponLines[];
+    public coupon_lines: OrderCouponLinesWooDto[];
 
     /**
      * List of refunds. See Order - Refunds properties.
      * @type {array}
      * @readonly
      */
-    public readonly refunds: Refunds[];
+    public readonly refunds: OrderRefundsWooDto[];
 
     /**
      * Define if the order is paid. It will set the status to processing and reduce stock items. Default is false.

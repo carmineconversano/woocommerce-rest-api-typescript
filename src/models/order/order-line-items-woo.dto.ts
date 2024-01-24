@@ -1,7 +1,7 @@
 import {Model} from "../shared/Model";
 import {Meta} from "../shared";
 
-export class LineItems extends Model{
+export class OrderLineItemsWooDto extends Model{
     public name: string;
 
     public product_id: number;

@@ -2,7 +2,7 @@
  * Represents a File resource.
  * @class
  */
-export class Downloads {
+export class ProductDownloadsWooDto {
     /**
      * File ID.
      * @type {string}

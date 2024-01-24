@@ -1,7 +1,7 @@
 /**
  * Represents a product image.
  */
-export class ProductImage {
+export class ProductImageWooDto {
     /**
      * Image ID.
      * @readonly
@@ -48,7 +48,7 @@ export class ProductImage {
     public alt: string;
 
     /**
-     * Creates an instance of ProductImage.
+     * Creates an instance of ProductImageWooDto.
      * @param {number} id - The image ID.
      * @param {string} date_created - The date the image was created, in the site's timezone.
      * @param {string} date_created_gmt - The date the image was created, as GMT.

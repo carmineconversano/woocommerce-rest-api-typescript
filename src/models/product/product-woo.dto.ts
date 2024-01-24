@@ -1,11 +1,11 @@
 import {Meta} from "../shared";
-import {ProductDimensions} from "./ProductDimensions";
-import {Downloads} from "./Downloads";
-import {ProductCategory} from "./product-category";
-import {ProductTag} from "./ProductTag";
-import {ProductImage} from "./ProductImage";
-import {ProductAttribute} from "./ProductAttribute";
-import {ProductDefaultAttribute} from "./ProductDefaultAttribute";
+import {ProductDimensionsWooDto} from "./product-dimensions-woo.dto";
+import {ProductDownloadsWooDto} from "./product-downloads-woo.dto";
+import {ProductCategoryWooDto} from "./product-category-woo.dto";
+import {ProductTagWooDto} from "./product-tag-woo.dto";
+import {ProductImageWooDto} from "./product-image-woo.dto";
+import {ProductAttributeWooDto} from "./product-attribute-woo.dto";
+import {ProductDefaultAttributeWooDto} from "./product-default-attribute-woo.dto";
 
 export type ProductType = 'simple' | 'grouped' | 'external' | 'variable';
 export type ProductStatus = 'draft' | 'pending' | 'private' | 'publish';
@@ -15,10 +15,10 @@ export type ProductStockStatus = 'instock' | 'outofstock' | 'onbackorder';
 export type PorudctBackOrders = 'no' | 'notify' | 'yes';
 
 /**
- * Represents a Product resource.
+ * Represents a ProductWooDto resource.
  * @class
  */
-export class Product {
+export class ProductWooDto {
     /**
      * Unique identifier for the resource.
      * @type {number}
@@ -26,19 +26,19 @@ export class Product {
     public readonly id: number = 0;
 
     /**
-     * Product name.
+     * ProductWooDto name.
      * @type {string}
      */
     public name: string = '';
 
     /**
-     * Product slug.
+     * ProductWooDto slug.
      * @type {string}
      */
     public reslug: string = '';
 
     /**
-     * Product URL.
+     * ProductWooDto URL.
      * @type {string}
      */
     public readonly permalink: string = '';
@@ -68,13 +68,13 @@ export class Product {
     public readonly date_modified_gmt: string = new Date().toISOString();
 
     /**
-     * Product type. Options: simple, grouped, external, variable. Default is simple.
+     * ProductWooDto type. Options: simple, grouped, external, variable. Default is simple.
      * @type {string}
      */
     public type: ProductType = 'simple';
 
     /**
-     * Product status (post status). Options: draft, pending, private, publish. Default is publish.
+     * ProductWooDto status (post status). Options: draft, pending, private, publish. Default is publish.
      * @type {string}
      */
     public status: ProductStatus = 'publish';
@@ -92,13 +92,13 @@ export class Product {
     public catalog_visibility: ProductVisbility = 'visible';
 
     /**
-     * Product description.
+     * ProductWooDto description.
      * @type {string}
      */
     public description: string = '';
 
     /**
-     * Product short description.
+     * ProductWooDto short description.
      * @type {string}
      */
     public short_description: string = '';
@@ -116,13 +116,13 @@ export class Product {
     public readonly price: string = '';
 
     /**
-     * Product regular price.
+     * ProductWooDto regular price.
      * @type {string}
      */
     public regular_price: string = '';
 
     /**
-     * Product sale price.
+     * ProductWooDto sale price.
      * @type {string}
      */
     public sale_price: string = '';
@@ -188,10 +188,10 @@ export class Product {
     public downloadable: boolean = false;
 
     /**
-     * List of downloadable files. See Product - Downloads properties.
+     * List of downloadable files. See ProductWooDto - ProductDownloadsWooDto properties.
      * @type {any[]}
      */
-    public downloads: Downloads[] = [];
+    public downloads: ProductDownloadsWooDto[] = [];
 
     /**
      * Number of times downloadable files can be downloaded after purchase. Default is -1.
@@ -206,13 +206,13 @@ export class Product {
     public download_expiry: number = -1;
 
     /**
-     * Product external URL. Only for external products.
+     * ProductWooDto external URL. Only for external products.
      * @type {string}
      */
     public external_url: string = '';
 
     /**
-     * Product external button text. Only for external products.
+     * ProductWooDto external button text. Only for external products.
      * @type {string}
      */
     public button_text: string = '';
@@ -272,16 +272,16 @@ export class Product {
     public sold_individually: boolean = false;
 
     /**
-     * Product weight.
+     * ProductWooDto weight.
      * @type {string}
      */
     public weight: string = '';
 
     /**
-     * Product dimensions. See Product - Dimensions properties.
+     * ProductWooDto dimensions. See ProductWooDto - Dimensions properties.
      * @type {any}
      */
-    public dimensions: ProductDimensions | null;
+    public dimensions: ProductDimensionsWooDto | null;
 
     /**
      * Shows if the product needs to be shipped.
@@ -344,7 +344,7 @@ export class Product {
     public cross_sell_ids: number[] = [];
 
     /**
-     * Product parent ID.
+     * ProductWooDto parent ID.
      * @type {number}
      */
     public parent_id: number = 0;
@@ -356,34 +356,34 @@ export class Product {
     public purchase_note: string = '';
 
     /**
-     * List of categories. See Product - Categories properties.
+     * List of categories. See ProductWooDto - Categories properties.
      * @type {any[]}
      */
-    public categories: ProductCategory[] = [];
+    public categories: ProductCategoryWooDto[] = [];
 
     /**
-     * List of tags. See Product - Tags properties.
+     * List of tags. See ProductWooDto - Tags properties.
      * @type {any[]}
      */
-    public tags: ProductTag[] = [];
+    public tags: ProductTagWooDto[] = [];
 
     /**
-     * List of images. See Product - Images properties.
+     * List of images. See ProductWooDto - Images properties.
      * @type {any[]}
      */
-    public images: ProductImage[] = [];
+    public images: ProductImageWooDto[] = [];
 
     /**
-     * List of attributes. See Product - Attributes properties.
+     * List of attributes. See ProductWooDto - Attributes properties.
      * @type {any[]}
      */
-    public attributes: ProductAttribute[] = [];
+    public attributes: ProductAttributeWooDto[] = [];
 
     /**
-     * Defaults variation attributes. See Product - Default attributes properties.
+     * Defaults variation attributes. See ProductWooDto - Default attributes properties.
      * @type {any[]}
      */
-    public default_attributes: ProductDefaultAttribute[] = [];
+    public default_attributes: ProductDefaultAttributeWooDto[] = [];
 
     /**
      * List of variations IDs.
@@ -404,7 +404,7 @@ export class Product {
     public menu_order: number = 0;
 
     /**
-     * Meta data. See Product - Meta data properties.
+     * Meta data. See ProductWooDto - Meta data properties.
      * @type {any[]}
      */
     public meta_data: Meta[] = [];

@@ -2,7 +2,7 @@
  * Represents the properties of a product category.
  * @class
  */
-export class ProductCategory {
+export class ProductCategoryWooDto {
     /**
      * Category ID.
      * @type {number}

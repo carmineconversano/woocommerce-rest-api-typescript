@@ -1,6 +1,6 @@
-import {OrderStatus} from "./Order";
+import {OrderStatus} from "./order-woo.dto";
 
-export class OrderQueryParams {
+export class OrderQueryParamsWooDto {
     public context?: 'view' | 'edit' = "view";
     public page: number = 1;
     public per_page: number = 10;

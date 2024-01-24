@@ -1,7 +1,7 @@
 /**
  * Represents default attributes for a product.
  */
-export class ProductDefaultAttribute {
+export class ProductDefaultAttributeWooDto {
     /**
      * Attribute ID.
      * @readonly
@@ -19,7 +19,7 @@ export class ProductDefaultAttribute {
     public option: string;
 
     /**
-     * Creates an instance of ProductDefaultAttribute.
+     * Creates an instance of ProductDefaultAttributeWooDto.
      * @param {number} id - The attribute ID.
      * @param {string} name - The attribute name.
      * @param {string} option - Selected attribute term name.

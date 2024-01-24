@@ -1,20 +1,11 @@
-import WooCommerceRestApi from "@carmineconversano/woocommerce-rest-api-fork";
-import {ProductQueryParamsWoo} from "../../models";
-import {SuccessResponse} from "../../models";
-import {addPaginationInfo} from "../../utils/addPaginationInfo";
-import {ProductWooDto} from "../../models";
+import WooCommerceRestApi, {IWooCommerceRestApiOptions} from "@carmineconversano/woocommerce-rest-api-fork";
+import {OrderQueryParamsWooDto, OrderWooDto} from "../../models";
+import {WooCommerceService} from "../woo-commerce.service";
+import {OrderQueryParamsOneWooDto} from "../../models/order/order-query-params-one-woo.dto";
 
-export class ProductWooService extends WooCommerceRestApi {
-    private PATH = 'products';
+export class ProductWooService extends WooCommerceService<OrderWooDto, OrderQueryParamsWooDto, OrderQueryParamsOneWooDto> {
 
-    public async retrieveList(query: ProductQueryParamsWoo): Promise<SuccessResponse<ProductWooDto[]>> {
-        const response: SuccessResponse<ProductWooDto[]> = await this.get(this.PATH, query);
-        return Promise.resolve(
-            addPaginationInfo(response)
-        )
-    }
-
-    public async retrieveOne(productId: number): Promise<SuccessResponse<ProductWooDto>> {
-        return await this.get(`${this.PATH}/${productId}`);
+    constructor(props: WooCommerceRestApi | IWooCommerceRestApiOptions) {
+        super(props, 'products');
     }
 }

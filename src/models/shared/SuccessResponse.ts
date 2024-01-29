@@ -1,6 +1,7 @@
 interface paginationHeaders {
     "x-wp-total"?: string;
     "x-wp-total-pages"?: string;
+    "x-wp-totalpages"?: string;
 }
 
 export class SuccessResponse<T> {

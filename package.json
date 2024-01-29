@@ -1,6 +1,6 @@
 {
   "name": "@carmineconversano/woocommerce-rest-api-typescript",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "WooCommerce REST API written in TypeScript based on WooCommerce REST API js lib",
   "types": "./lib/cjs/types/index.d.ts",
   "main": "./lib/cjs/index.js",

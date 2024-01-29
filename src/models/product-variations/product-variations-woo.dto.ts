@@ -13,6 +13,10 @@ export class ProductVariationsWooDto {
      */
     public readonly id: number;
 
+    public name?: string;
+
+    public parent_id?: number;
+
     /**
      * The date the variation was created, in the site's timezone. (Read-only)
      */

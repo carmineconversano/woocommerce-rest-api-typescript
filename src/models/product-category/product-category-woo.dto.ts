@@ -7,7 +7,7 @@ export type ProductCategoryDisplayType = 'default' | 'products' | 'subcategories
 /**
  * Class representing a product category for WooCommerce.
  */
-export class ProductCategoryWooDto {
+export class ProductCategoryObjectWooDto {
     /**
      * Unique identifier for the resource. (Read-only)
      */

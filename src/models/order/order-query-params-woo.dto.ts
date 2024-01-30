@@ -7,21 +7,21 @@ export class OrderQueryParamsWooDto {
      * Options: view and edit. Default is view.
      * @type {OrderQueryParamsContext}
      */
-    public context: OrderQueryParamsContext = 'view';
+    public context?: OrderQueryParamsContext = 'view';
 
     /**
      * Current page of the collection.
      * Default is 1.
      * @type {number}
      */
-    public page: number = 1;
+    public page?: number = 1;
 
     /**
      * Maximum number of items to be returned in result set.
      * Default is 10.
      * @type {number}
      */
-    public per_page: number = 10;
+    public per_page?: number = 10;
 
     /**
      * Limit results to those matching a string.
@@ -82,14 +82,14 @@ export class OrderQueryParamsWooDto {
      * Options: asc and desc. Default is desc.
      * @type {OrderQueryParamsOrder}
      */
-    public order: OrderQueryParamsOrder = 'desc';
+    public order?: OrderQueryParamsOrder = 'desc';
 
     /**
      * Sort collection by object attribute.
      * Options: date, id, include, title, and slug. Default is date.
      * @type {OrderQueryParamsOrderBy}
      */
-    public orderby: OrderQueryParamsOrderBy = 'date';
+    public orderby?: OrderQueryParamsOrderBy = 'date';
 
     /**
      * Limit result set to those of particular parent IDs.
@@ -109,7 +109,7 @@ export class OrderQueryParamsWooDto {
      * Default is any.
      * @type {OrderQueryParamsStatus}
      */
-    public status: OrderQueryParamsStatus = 'any';
+    public status?: OrderQueryParamsStatus = 'any';
 
     /**
      * Limit result set to orders assigned a specific customer.
@@ -128,7 +128,7 @@ export class OrderQueryParamsWooDto {
      * Default is 2.
      * @type {number}
      */
-    public dp: number = 2;
+    public dp?: number = 2;
 }
 
 /**

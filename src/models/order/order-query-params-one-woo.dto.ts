@@ -4,5 +4,5 @@ export class OrderQueryParamsOneWooDto {
      * Default is 2.
      * @type {number}
      */
-    public dp: number = 2;
+    public dp?: number = 2;
 }

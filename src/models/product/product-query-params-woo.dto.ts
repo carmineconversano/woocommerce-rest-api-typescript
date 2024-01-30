@@ -14,17 +14,17 @@ export class ProductQueryParamsWoo {
     /**
      * Scope under which the request is made; determines fields present in response. Options: view and edit. Default is view.
      */
-    public context: ProductContextParams = "view";
+    public context?: ProductContextParams = "view";
 
     /**
      * Current page of the collection. Default is 1.
      */
-    public page: number = 1;
+    public page?: number = 1;
 
     /**
      * Maximum number of items to be returned in the result set. Default is 10.
      */
-    public per_page: number = 10;
+    public per_page?: number = 10;
 
     /**
      * Limit results to those matching a string.
@@ -74,12 +74,12 @@ export class ProductQueryParamsWoo {
     /**
      * Order sort attribute ascending or descending. Options: asc and desc. Default is desc.
      */
-    public order: ProductOrderParams = "desc";
+    public order?: ProductOrderParams = "desc";
 
     /**
      * Sort collection by object attribute. Options: date, id, include, title, slug, price, popularity, and rating. Default is date.
      */
-    public orderby: ProductOrderBy = "date";
+    public orderby?: ProductOrderBy = "date";
 
     /**
      * Limit result set to those of particular parent IDs.
@@ -99,7 +99,7 @@ export class ProductQueryParamsWoo {
     /**
      * Limit result set to products assigned a specific status. Options: any, draft, pending, private, and publish. Default is any.
      */
-    public status: ProductStatusParams = "any";
+    public status?: ProductStatusParams = "any";
 
     /**
      * Limit result set to products assigned a specific type. Options: simple, grouped, external, and variable.
@@ -144,7 +144,7 @@ export class ProductQueryParamsWoo {
     /**
      * Limit result set to products with a specific tax class. Default options: standard, reduced-rate, and zero-rate.
      */
-    public tax_class: ProductTaxClassParams = "standard";
+    public tax_class?: ProductTaxClassParams = "standard";
 
     /**
      * Limit result set to products on sale.
@@ -165,5 +165,10 @@ export class ProductQueryParamsWoo {
      * Limit result set to products with specified stock status. Options: instock, outofstock, and onbackorder.
      */
     public stock_status?: ProductStockStatusParams;
+
+    constructor(page?: number, per_page?: number) {
+        this.page = page;
+        this.per_page = per_page;
+    }
 }
 

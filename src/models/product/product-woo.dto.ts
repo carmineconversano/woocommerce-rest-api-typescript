@@ -404,6 +404,12 @@ export class ProductWooDto {
     public menu_order: number = 0;
 
     /**
+     * Number of items considered low stock in the “Low stock threshold” field.
+     * @type {number}
+     */
+    public readonly low_stock_amount: number;
+
+    /**
      * Meta data. See ProductWooDto - Meta data properties.
      * @type {any[]}
      */

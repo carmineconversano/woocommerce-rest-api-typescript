@@ -14,5 +14,7 @@ export class OrderTaxLinesWooDto extends Model{
 
     public readonly shipping_tax_total: string;
 
+    public readonly rate_percent?: number;
+
     public meta_data: Meta[];
 }

@@ -85,7 +85,7 @@ export class ProductCategoryQueryParams {
      */
     public slug?: string;
 
-    constructor(page?: number, per_page?: number) {
+    constructor(page: number, per_page: number) {
         this.page = page;
         this.per_page = per_page;
     }

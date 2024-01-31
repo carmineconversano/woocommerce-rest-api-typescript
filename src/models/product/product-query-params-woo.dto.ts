@@ -166,7 +166,7 @@ export class ProductQueryParamsWoo {
      */
     public stock_status?: ProductStockStatusParams;
 
-    constructor(page?: number, per_page?: number) {
+    constructor(page: number, per_page: number) {
         this.page = page;
         this.per_page = per_page;
     }
